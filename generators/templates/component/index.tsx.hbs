@@ -1,0 +1,16 @@
+import { {{pascalCase name}}PropsType } from './types';
+import * as S from './styles';
+
+const {{pascalCase name}}: React.FC<{{pascalCase name}}PropsType> = ({
+  children,
+  innerRef,
+  ...rest
+}) => {
+  return (
+    <S.Container {...rest} ref={innerRef}>
+      {children}
+    </S.Container>
+  );
+};
+
+export default {{pascalCase name}};
