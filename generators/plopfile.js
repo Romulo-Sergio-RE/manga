@@ -29,4 +29,26 @@ module.exports = function (plop) {
       },
     ],
   });
+  plop.setGenerator('page', {
+    description: 'Create Page',
+    prompts: [
+      {
+        type: 'input',
+        name: 'name',
+        message: 'Page name please',
+      },
+    ],
+    actions: [
+      {
+        type: 'add',
+        path: '../src/app/{{pascalCase name}}/layout.tsx',
+        templateFile: 'templates/createPage/layout.tsx.hbs',
+      },
+      {
+        type: 'add',
+        path: '../src/app/{{pascalCase name}}/page.tsx',
+        templateFile: 'templates/createPage/page.tsx.hbs',
+      },
+    ],
+  });
 };
