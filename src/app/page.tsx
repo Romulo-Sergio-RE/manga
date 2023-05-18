@@ -1,12 +1,10 @@
 "use client"
-
-import Button from "@/components/Button"
+import FirstSection from "@/templates/FirstSection"
 
 export default function Home() {
   return (
     <div >
-      Home
-      <Button></Button>
+      <FirstSection />
     </div>
   )
 }
