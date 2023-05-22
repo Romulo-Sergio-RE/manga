@@ -1,7 +1,8 @@
 import axios from "axios";
 
+const BASE_URL = process.env.NEXT_PUBLIC_REACT_APP_BASE_URL;
 const api = axios.create({
-  baseURL: process.env.API_KEY,
+  baseURL: BASE_URL,
 });
 
 export default api;
