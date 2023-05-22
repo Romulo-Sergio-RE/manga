@@ -10,7 +10,6 @@ const FirstSection: React.FC<FirstSectionPropsType> = ({
   return (
     <S.Container {...rest}>
       fisrt section
-      <CardPrimary />
     </S.Container>
   );
 };
