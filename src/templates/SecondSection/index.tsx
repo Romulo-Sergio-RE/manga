@@ -80,7 +80,6 @@ const SecondSection: React.FC<SecondSectionPropsType> = ({
           }
         </Swiper>
         :
-
         isTablet ?
           <S.ContainerMangas>
             {
