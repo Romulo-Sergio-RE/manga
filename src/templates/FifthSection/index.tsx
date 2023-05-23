@@ -10,7 +10,6 @@ const FifthSection: React.FC<FifthSectionPropsType> = ({
 }) => {
   const api = useApiManga()
 
-  console.log(api.AllMangas)
   return (
     <S.Container {...rest}>
       fifth section

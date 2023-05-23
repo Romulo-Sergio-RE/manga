@@ -12,16 +12,16 @@ type SizeType = {
 };
 
 const size = {
-  mobile: '640px',
-  tablet: '768px',
-  laptop: '1200px',
-  laptopL: '1280px',
-  desktop: '1536px',
+  mobile: "500px",
+  tablet: "770px",
+  laptop: "1200px",
+  laptopL: "1280px",
+  desktop: "1536px",
 };
 
 const keyBreakpoints = {
-  up: 'min-width:',
-  down: 'max-width:',
+  up: "min-width:",
+  down: "max-width:",
 };
 
 type QuerySizeType = keyof SizeType;
@@ -29,12 +29,12 @@ type QuerySizeType = keyof SizeType;
 type QueryKeyBreakpointsType = keyof KeyBreakpointsType;
 
 type EnumPalette =
-  | 'primary'
-  | 'secondary'
-  | 'gradient'
-  | 'gray'
-  | 'default'
-  | 'midnight';
+  | "primary"
+  | "secondary"
+  | "gradient"
+  | "gray"
+  | "default"
+  | "midnight";
 
 export { size, keyBreakpoints };
 

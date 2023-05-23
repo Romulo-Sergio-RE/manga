@@ -1,6 +1,7 @@
 import { karla } from "@/assets/fonts/font";
 import styled from "styled-components";
 import { Aligment } from "../Aligment";
+import { formatBreakpoint } from "@/utils";
 
 export const Container = styled(Aligment)`
   display: flex;
@@ -16,6 +17,13 @@ export const Container = styled(Aligment)`
     font-weight: 700;
     color: #000000;
   }
+  @media ${formatBreakpoint("up", "tablet")} {
+    span {
+      font-size: 1rem;
+      bottom: 0.9375rem;
+      right: 0.5rem;
+    }
+  }
 `;
 export const ImgManga = styled.div`
   filter: drop-shadow(0.0625rem 0.375rem 0.25rem rgb(0, 0, 0, 0.6));
@@ -26,6 +34,9 @@ export const SubTitle = styled.div`
   font-weight: 400;
   color: #000000;
   padding-top: 0.625rem;
+  @media ${formatBreakpoint("up", "tablet")} {
+    font-size: 1rem;
+  }
 `;
 
 export const Title = styled.div`
@@ -33,4 +44,7 @@ export const Title = styled.div`
   font-size: 1rem;
   font-weight: 600;
   color: #000000;
+  @media ${formatBreakpoint("up", "tablet")} {
+    font-size: 1.25rem;
+  }
 `;

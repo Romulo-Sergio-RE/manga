@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <ApiMangaProvider>
       <div >
-        <FifthSection />
+        <SecondSection />
       </div>
     </ApiMangaProvider>
   )
