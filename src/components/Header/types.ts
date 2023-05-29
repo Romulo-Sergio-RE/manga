@@ -1,7 +1,6 @@
-export type ButtonPropsType = {
-  children?: any;
+export type HeaderPropsType = {
+  children?:any;
   style?: React.CSSProperties;
   innerRef?(e: Element | null): void;
   className?: string;
-  title: string;
 };
