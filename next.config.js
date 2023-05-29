@@ -1,4 +1,12 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+    images: {
+        domains: ["media.kitsu.io"]
+    }
+}
 
-module.exports = nextConfig
+module.exports = {
+    images: {
+        domains: ["media.kitsu.io"]
+    }
+}
