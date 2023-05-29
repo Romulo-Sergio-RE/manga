@@ -4,22 +4,26 @@ import { useMediaQuery } from '@/hooks';
 import Header from '@/components/Header';
 import Button from '@/components/Button';
 import { useApiManga } from '@/context/apiMangaContext';
-import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import { useApi } from '@/hooks/useApi';
 
 const FirstSection: React.FC<FirstSectionPropsType> = ({
   children,
   innerRef,
   ...rest
 }) => {
+
   const isMobile = useMediaQuery("tablet");
   const api = useApiManga();
 
   function truncate(str: string, n: number) {
     return str.length > n ? str.substring(0, n - 1) + "..." : str;
   }
+  console.log(api.randomManga)
+
   return (
     <S.Container {...rest}>
-      <Header />
+      {/* <Header />
       <S.ContainerInfo>
         <S.ImgBack />
         {isMobile ? <S.ImgOnePiece /> : <S.ImgOnePieceWeb />}
@@ -32,7 +36,7 @@ const FirstSection: React.FC<FirstSectionPropsType> = ({
           </S.ContainerInfoManga>
           <Button title='Mais Informacoes' />
         </S.ContainerManga>
-      </S.ContainerInfo>
+      </S.ContainerInfo> */}
     </S.Container >
   );
 };
