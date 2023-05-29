@@ -1,6 +1,5 @@
 import { ThirdSectionPropsType } from './types';
 import * as S from './styles';
-import { useMediaQuery } from '@/hooks';
 import CardSecond from '@/components/CardSecond';
 
 const ThirdSection: React.FC<ThirdSectionPropsType> = ({
@@ -8,42 +7,63 @@ const ThirdSection: React.FC<ThirdSectionPropsType> = ({
   innerRef,
   ...rest
 }) => {
+  const arrayCardsMangas = [
+    {
+      "id": 1,
+      "imageManga": <S.ImgAnimeSportMobile />,
+      "title": "Esporte",
+      "descrition": "Historia involvendo o esporte e competiçoes",
+    },
+    {
+      "id": 2,
+      "imageManga": <S.ImgAnimeActionMobile />,
+      "title": "Ação",
+      "descrition": "Sentimento de tensão nas lutas",
+    },
+    {
+      "id": 3,
+      "imageManga": <S.ImgAnimeComedyMobile />,
+      "title": "Comedia",
+      "descrition": "Mergulhe em um mundo imaginario e inspirador",
+    },
+    {
+      "id": 4,
+      "imageManga": <S.ImgAnimeHorrorMobile />,
+      "title": "Terror",
+      "descrition": "Aproveite a sensação de medo",
+    },
+    {
+      "id": 5,
+      "imageManga": <S.ImgAnimeDramaMobile />,
+      "title": "Drama",
+      "descrition": "Aproveite o sentimento de drama",
+    },
+    {
+      "id": 6,
+      "imageManga": <S.ImgAnimeSliceOfLifeMobile />,
+      "title": "Slice of Life",
+      "descrition": "Mergulhe no estilo de vida dos personagens",
+    },
 
-  const isMobile = useMediaQuery('laptop');
 
+  ]
   return (
     <S.Container {...rest}>
       <S.Title>Explore os seus Interesses </S.Title>
-      <CardSecond
-        imgManga={<S.ImgAnimeSportMobile />}
-        titleManga='Esporte'
-        descriptionManga='Historia involvendo o esporte e competiçoes'
-      />
-      <CardSecond
-        imgManga={<S.ImgAnimeActionMobile />}
-        titleManga='Ação'
-        descriptionManga='Sentimento de tensão nas lutas'
-      />
-      <CardSecond
-        imgManga={<S.ImgAnimeComedyMobile />}
-        titleManga='Comedia'
-        descriptionManga='Mergulhe em um mundo imaginario e inspirador'
-      />
-      <CardSecond
-        imgManga={<S.ImgAnimeHorrorMobile />}
-        titleManga='Terror'
-        descriptionManga='Aproveite a sensação de medo'
-      />
-      <CardSecond
-        imgManga={<S.ImgAnimeDramaMobile />}
-        titleManga='Drama'
-        descriptionManga='Aproveite o sentimento de drama'
-      />
-      <CardSecond
-        imgManga={<S.ImgAnimeSliceOfLifeMobile />}
-        titleManga='Slice of Life'
-        descriptionManga='Mergulhe no estilo de vida dos personagens'
-      />
+      <S.ContainerGrid>
+        {
+          arrayCardsMangas.map(({ id, imageManga, title, descrition }) => {
+            return (
+              <CardSecond
+                key={id}
+                imgManga={imageManga}
+                titleManga={title}
+                descriptionManga={descrition}
+              />
+            )
+          })
+        }
+      </S.ContainerGrid>
     </S.Container>
   );
 };

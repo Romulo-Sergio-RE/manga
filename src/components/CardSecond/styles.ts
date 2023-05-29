@@ -16,17 +16,17 @@ export const Container = styled(Aligment)`
     color: #000000;
   }
   .title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    top: 0.625rem;
-    left: 1.25rem;
+    font-size: 18px;
+    font-weight: 800;
+    top: 10px;
+    left: 20px;
   }
   .description {
-    width: 11.875rem;
-    font-size: 0.875rem;
+    width: 160px;
+    font-size: 14px;
     font-weight: 700;
-    bottom: 0.875rem;
-    left: 3.125rem;
+    bottom: 14px;
+    left: 40px;
   }
 `;
 export const ImgManga = styled.div`
