@@ -49,7 +49,7 @@ const ThirdSection: React.FC<ThirdSectionPropsType> = ({
   ]
   return (
     <S.Container {...rest}>
-      <S.Title>Explore os seus Interesses </S.Title>
+      <S.Title>Explore your Interests</S.Title>
       <S.ContainerGrid>
         {
           arrayCardsMangas.map(({ id, imageManga, title, descrition }) => {

@@ -10,28 +10,23 @@ import ImageInstagram from "../../assets/images/instagram.png";
 import ImageYoutube from "../../assets/images/youtube.png";
 
 export const Container = styled(Aligment)`
+  width: 100%;
+  height: 100%;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 3.75rem 0 0 0;
-  gap: 2.5rem;
-  @media ${formatBreakpoint("up", "tablet")} {
-    padding: 5.625rem 0 0 0;
-    gap: 3.75rem;
-  }
-`;
-export const Test = styled.div`
-  width: 100%;
-  position: absolute;
-  bottom: 0rem;
+  position: relative;
+  gap: 50px;
+  background-color: #dad5c0;
 `;
 export const Footer = styled(Aligment)`
+  bottom: 0;
+  position: absolute;
   width: 100%;
+  text-align: center;
   height: 3.125rem;
   background-color: #000000;
   color: #fff;
-  position: absolute;
-  bottom: 0rem;
   align-items: center;
   justify-content: center;
   font-size: 0.875rem;
@@ -60,6 +55,11 @@ export const ContainerIcons = styled(Aligment)`
   justify-content: center;
   flex-direction: row;
   gap: 1rem;
+  cursor: pointer;
+  transition: all 10s;
+  :hover {
+    transform: scale(1.05);
+  }
 `;
 
 export const ImgFooter = styled(Image).attrs({

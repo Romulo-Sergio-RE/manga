@@ -9,7 +9,9 @@ const Button: React.FC<ButtonPropsType> = ({
 }) => {
   return (
     <S.Container {...rest} ref={innerRef}>
-      {title}
+      <button>
+        {title}
+      </button>
     </S.Container>
   );
 };

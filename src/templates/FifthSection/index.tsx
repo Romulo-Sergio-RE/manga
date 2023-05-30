@@ -62,7 +62,7 @@ const FifthSection: React.FC<FifthSectionPropsType> = ({
   return (
     <S.Container {...rest}>
       <>
-        <S.Title>Mangas Favoritos da Galera</S.Title>
+        <S.Title>Favorite Mangas</S.Title>
         {
           isMobile ?
             <Swiper
@@ -117,7 +117,7 @@ const FifthSection: React.FC<FifthSectionPropsType> = ({
         }
       </>
       <>
-        <S.Title>Mangas Mais Vistos</S.Title>
+        <S.Title>Most Viewed Mangas</S.Title>
         {
           isMobile ?
             <Swiper

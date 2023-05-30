@@ -5,7 +5,6 @@ import { useMediaQuery } from '@/hooks';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper";
 
 const SecondSection: React.FC<SecondSectionPropsType> = ({
   children,
@@ -63,7 +62,7 @@ const SecondSection: React.FC<SecondSectionPropsType> = ({
   ]
   return (
     <S.Container {...rest}>
-      <S.Title>Lançamento</S.Title>
+      <S.Title>Releases</S.Title>
       {isMobile ?
         <Swiper
           slidesPerView={1}
@@ -118,8 +117,8 @@ const SecondSection: React.FC<SecondSectionPropsType> = ({
               })
             }
           </S.ContainerMangas>
-
       }
+
     </S.Container>
   );
 };

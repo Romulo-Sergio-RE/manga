@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Aligment } from "../Aligment";
 import { karla } from "@/assets/fonts/font";
+import { formatBreakpoint } from "@/utils";
 
 export const Container = styled(Aligment)`
   align-items: baseline;
@@ -13,6 +14,9 @@ export const ImgManga = styled.div`
 export const Title = styled.div`
   font-size: 1.25rem;
   font-family: ${karla.style.fontFamily};
-  font-weight: 500;
+  font-weight: 700;
   color: #000000;
+  @media ${formatBreakpoint("up", "tablet")} {
+    font-size: 1.5rem;
+  }
 `;

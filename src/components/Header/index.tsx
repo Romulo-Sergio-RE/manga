@@ -2,6 +2,7 @@ import { HeaderPropsType } from './types';
 import * as S from './styles';
 import { useState } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import Link from 'next/link';
 
 const Header: React.FC<HeaderPropsType> = ({
   children,
@@ -25,15 +26,9 @@ const Header: React.FC<HeaderPropsType> = ({
             onClick={() => setNav(!Nav)}
           />
         </div>
-        <div className='link'>
-          Gênero
-        </div>
-        <div className='link'>
-          Lançamento Semanal
-        </div>
-        <div className='link'>
-          Contato
-        </div>
+        <Link href={"/"} className='link'>Genres</Link>
+        <Link href={"/"} className='link'>Weekly Release</Link>
+        <Link href={"/"} className='link'>Contact</Link>
       </div>
     </S.ContainerInternal>
   );

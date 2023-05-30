@@ -8,17 +8,19 @@ const FourthSection: React.FC<FourthSectionPropsType> = ({
   ...rest
 }) => {
 
-  const isMobile = useMediaQuery("tablet")
+  const isMobile = useMediaQuery("mobile")
   return (
     <S.Container {...rest} >
       <S.ContainerTitleIcon>
-        <S.Title>Leia mangás em qualquer hora e lugar</S.Title>
+        <S.Title>Read manga anytime, anywhere</S.Title>
         <S.ContainerIconApp>
           <S.ImgGoogle />
           <S.ImgApple />
         </S.ContainerIconApp>
       </S.ContainerTitleIcon>
-      {isMobile ? <S.ImgAppMobile /> : <S.ImgAppWeb />}
+      <S.ContainerImg>
+        {isMobile ? <S.ImgAppMobile /> : <S.ImgAppWeb />}
+      </S.ContainerImg>
     </S.Container>
   );
 };

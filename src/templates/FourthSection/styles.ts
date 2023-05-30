@@ -12,14 +12,18 @@ export const Container = styled(Aligment)`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 3.75rem 0 0 0;
-  gap: 2rem;
+  padding: 60px 0 0 0;
+  gap: 32px;
   @media ${formatBreakpoint("up", "tablet")} {
-    padding: 5.625rem 0 0 0;
+    padding: 90px 0 0 0;
     align-items: start;
     flex-direction: row;
-    gap: 6.25rem;
+    gap: 100px;
   }
+`;
+export const ContainerImg = styled(Aligment)`
+  position: relative;
+  top: 4px;
 `;
 export const ContainerTitleIcon = styled(Aligment)`
   align-items: center;
@@ -43,6 +47,11 @@ export const ContainerIconApp = styled(Aligment)`
   justify-content: center;
   flex-direction: column;
   gap: 1rem;
+  cursor: pointer;
+  transition: all 10s;
+  :hover {
+    transform: scale(1.05);
+  }
   @media ${formatBreakpoint("up", "mobile")} {
     flex-direction: row;
     gap: 2rem;
@@ -53,7 +62,7 @@ export const ImgAppWeb = styled(Image).attrs({
   src: ImageAppWeb,
   alt: "imagem do app para celular",
   width: 230,
-  height: 312,
+  height: 330,
   unoptimized: true,
   priority: true,
 })``;

@@ -11,9 +11,10 @@ const SeventhSection: React.FC<SeventhSectionPropsType> = ({
   return (
     <S.Container {...rest} >
       <S.Title>MANGA</S.Title>
-      <S.Text>Se você  quer se aventurar nas grandes historias
-        dos heróis dos mangás com outros leitores de todo o mundo,
-        o MANGA é o melhor lugar para você para se aventurar.
+      <S.Text>
+        If you want to venture into the great stories
+        of manga heroes with other readers around the world,
+        MANGA is the best place for you to venture.
       </S.Text>
 
       <S.ContainerIcons>

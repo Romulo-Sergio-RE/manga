@@ -4,8 +4,6 @@ import { useMediaQuery } from '@/hooks';
 import Header from '@/components/Header';
 import Button from '@/components/Button';
 import { useApiManga } from '@/context/apiMangaContext';
-import { useEffect, useState } from 'react';
-import { useApi } from '@/hooks/useApi';
 
 const FirstSection: React.FC<FirstSectionPropsType> = ({
   children,
@@ -25,7 +23,6 @@ const FirstSection: React.FC<FirstSectionPropsType> = ({
     ["Haikyuu!!", <S.ImgHaikyuu />, <S.ImgHaikyuuWeb />],
     ["Kimetsu no Yaiba", <S.ImgKimestu />, <S.ImgKimestuWeb />],
   ];
-
 
   const nameManga = api.randomManga.map((a) => a.attributes.canonicalTitle)
   const imageCoverManga = api.randomManga.map((a) => a.attributes.coverImage.original)
@@ -63,7 +60,7 @@ const FirstSection: React.FC<FirstSectionPropsType> = ({
               </S.ContainerInfoManga>
             )
           })}
-          <Button title='Mais Informacoes' />
+          <Button title='More Information' />
         </S.ContainerManga>
       </S.ContainerInfo>
     </S.Container >
@@ -71,18 +68,3 @@ const FirstSection: React.FC<FirstSectionPropsType> = ({
 };
 
 export default FirstSection;
-/*
-     {api.allMangas.map((a) => {
-          return (
-            <S.ContainerInfoManga>
-              <S.Title>{a.attributes.canonicalTitle}</S.Title>
-              <S.Text>
-                {truncate(a.attributes.description, 100)}
-              </S.Text>
-              <div>
-                {a.attributes.coverImage.original}
-              </div>
-            </S.ContainerInfoManga>
-          )
-        })}
-*/

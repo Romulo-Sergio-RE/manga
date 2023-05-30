@@ -12,8 +12,8 @@ const CardSecond: React.FC<CardSecondPropsType> = ({
   return (
     <S.Container {...rest}>
       <S.ImgManga>
-        <span className='title'>{titleManga}</span>
-        <span className='description'>{descriptionManga}</span>
+        <p className='title'>{titleManga}</p>
+        <p className='description'>{descriptionManga}</p>
         {imgManga}
       </S.ImgManga>
     </S.Container>

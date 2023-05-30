@@ -14,7 +14,9 @@ export const Container = styled(Aligment)`
   align-items: center;
   justify-content: center;
   padding: 60px 0;
-  gap: 50px;
+  gap: 40px;
+  border-radius: 40px 40px 0 0;
+  background-color: #dad5c0;
   .swiper {
     width: 100%;
     height: 100%;
@@ -27,6 +29,7 @@ export const Container = styled(Aligment)`
   }
   @media ${formatBreakpoint("up", "tablet")} {
     padding: 90px 0;
+    border-radius: 80px 80px 0 0;
   }
 `;
 export const ContainerGridMangas = styled(Aligment)`

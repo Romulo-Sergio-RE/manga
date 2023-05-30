@@ -6,7 +6,7 @@ export const Container = styled(Aligment)`
   display: flex;
   align-items: baseline;
   justify-content: center;
-  span {
+  p {
     display: flex;
     align-items: center;
     justify-content: center;

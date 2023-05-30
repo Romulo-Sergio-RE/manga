@@ -52,8 +52,8 @@ export const ImgBack = styled(Aligment)<PropsImageBack>`
   position: absolute;
   top: 0;
   z-index: -2;
-  opacity: 0.6;
-
+  opacity: 0.3;
+  border-radius: 0 0 20px 20px;
   background-position: center;
   background-size: cover;
   background-image: url(${(props) => props.coverimg});
@@ -131,7 +131,7 @@ export const ImgBungouWeb = styled(Image).attrs({
 export const ImgHaikyuu = styled(Image).attrs({
   src: ImageHaikyuu,
   alt: "imagem do one piece",
-  width: 286,
+  width: 370,
   height: 280,
   unoptimized: true,
   priority: true,
@@ -139,8 +139,8 @@ export const ImgHaikyuu = styled(Image).attrs({
 export const ImgHaikyuuWeb = styled(Image).attrs({
   src: ImageHaikyuu,
   alt: "imagem do one piece",
-  width: 386,
-  height: 380,
+  width: 380,
+  height: 320,
   unoptimized: true,
   priority: true,
 })``;
