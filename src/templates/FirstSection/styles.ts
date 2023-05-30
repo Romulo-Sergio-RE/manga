@@ -3,8 +3,14 @@ import { Aligment } from "@/components/Aligment";
 import { formatBreakpoint } from "@/utils/formatBreakpoint";
 import styled from "styled-components";
 import Image from "next/image";
+import ImageKimetsu from "../../assets/images/firstSection/anime-1.png";
+import ImageBungou from "../../assets/images/firstSection/anime-2.png";
+import ImageHaikyuu from "../../assets/images/firstSection/anime-3.png";
 import ImageOnePiece from "../../assets/images/firstSection/anime-4.png";
 
+type PropsImageBack = {
+  coverimg: string;
+};
 export const Container = styled(Aligment)`
   align-items: center;
   justify-content: center;
@@ -40,7 +46,7 @@ export const ContainerInfo = styled(Aligment)`
     gap: 90px;
   }
 `;
-export const ImgBack = styled(Aligment)`
+export const ImgBack = styled(Aligment)<PropsImageBack>`
   width: 100%;
   height: 100%;
   position: absolute;
@@ -50,7 +56,7 @@ export const ImgBack = styled(Aligment)`
 
   background-position: center;
   background-size: cover;
-  background-image: url("https://media.kitsu.io/manga/38/cover_image/020c994fbf81443b79723d8fca369df0.jpg");
+  background-image: url(${(props) => props.coverimg});
 `;
 export const Title = styled(Aligment)`
   font-size: 24px;
@@ -84,6 +90,54 @@ export const ImgOnePiece = styled(Image).attrs({
 })``;
 export const ImgOnePieceWeb = styled(Image).attrs({
   src: ImageOnePiece,
+  alt: "imagem do one piece",
+  width: 386,
+  height: 380,
+  unoptimized: true,
+  priority: true,
+})``;
+export const ImgKimestu = styled(Image).attrs({
+  src: ImageKimetsu,
+  alt: "imagem do one piece",
+  width: 286,
+  height: 280,
+  unoptimized: true,
+  priority: true,
+})``;
+export const ImgKimestuWeb = styled(Image).attrs({
+  src: ImageKimetsu,
+  alt: "imagem do one piece",
+  width: 386,
+  height: 380,
+  unoptimized: true,
+  priority: true,
+})``;
+export const ImgBungou = styled(Image).attrs({
+  src: ImageBungou,
+  alt: "imagem do one piece",
+  width: 286,
+  height: 280,
+  unoptimized: true,
+  priority: true,
+})``;
+export const ImgBungouWeb = styled(Image).attrs({
+  src: ImageBungou,
+  alt: "imagem do one piece",
+  width: 386,
+  height: 380,
+  unoptimized: true,
+  priority: true,
+})``;
+export const ImgHaikyuu = styled(Image).attrs({
+  src: ImageHaikyuu,
+  alt: "imagem do one piece",
+  width: 286,
+  height: 280,
+  unoptimized: true,
+  priority: true,
+})``;
+export const ImgHaikyuuWeb = styled(Image).attrs({
+  src: ImageHaikyuu,
   alt: "imagem do one piece",
   width: 386,
   height: 380,

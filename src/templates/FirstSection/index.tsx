@@ -19,24 +19,53 @@ const FirstSection: React.FC<FirstSectionPropsType> = ({
   function truncate(str: string, n: number) {
     return str.length > n ? str.substring(0, n - 1) + "..." : str;
   }
-  console.log(api.randomManga)
+  const ArrayNameManga = [
+    ["One Piece", <S.ImgOnePiece />, <S.ImgOnePieceWeb />],
+    ["Bungou Stray Dogs", <S.ImgBungou />, <S.ImgBungouWeb />],
+    ["Haikyuu!!", <S.ImgHaikyuu />, <S.ImgHaikyuuWeb />],
+    ["Kimetsu no Yaiba", <S.ImgKimestu />, <S.ImgKimestuWeb />],
+  ];
 
+
+  const nameManga = api.randomManga.map((a) => a.attributes.canonicalTitle)
+  const imageCoverManga = api.randomManga.map((a) => a.attributes.coverImage.original)
+
+  const getImageManga = () => {
+    let arrayTeste = []
+    if (nameManga !== undefined) {
+      for (let i = 0; i < ArrayNameManga.length; i++) {
+        if (ArrayNameManga[i][0] === nameManga[0]) {
+          arrayTeste.push(ArrayNameManga[i])
+          break;
+        }
+      }
+    }
+    return (
+      <>
+        {isMobile ? arrayTeste[0]?.[1] : arrayTeste[0]?.[2]}
+      </>
+    )
+  }
   return (
     <S.Container {...rest}>
-      {/* <Header />
+      <Header />
       <S.ContainerInfo>
-        <S.ImgBack />
-        {isMobile ? <S.ImgOnePiece /> : <S.ImgOnePieceWeb />}
+        <S.ImgBack coverimg={imageCoverManga[0]} />
+        {getImageManga()}
         <S.ContainerManga>
-          <S.ContainerInfoManga>
-            <S.Title>One Piece</S.Title>
-            <S.Text>
-              {truncate("One Piece começa quando Gol D. Roger, o Rei Dos Piratas que possuiu tudo nesse mundo, antes de ser executado, diz que escondeu o seu tesouro em algum lugar da Grand Line, um oceano extremamente perigoso....", 100)}
-            </S.Text>
-          </S.ContainerInfoManga>
+          {api.randomManga.map((manga) => {
+            return (
+              <S.ContainerInfoManga key={manga.id}>
+                <S.Title>{manga.attributes.canonicalTitle}</S.Title>
+                <S.Text>
+                  {truncate(manga.attributes.description, 100)}
+                </S.Text>
+              </S.ContainerInfoManga>
+            )
+          })}
           <Button title='Mais Informacoes' />
         </S.ContainerManga>
-      </S.ContainerInfo> */}
+      </S.ContainerInfo>
     </S.Container >
   );
 };

@@ -7,6 +7,7 @@ type ApiContextProps = {
 
 type ContextProps = {
     randomManga: any[]
+    getRandomManga: (teste: []) => Promise<void>
 }
 
 const ApiMangaContext = createContext<ContextProps>(null!)
@@ -22,13 +23,13 @@ const ApiMangaProvider = ({ children }: ApiContextProps) => {
         setRandomManga([]);
         randomManga = Math.floor(Math.random() * (ArrayNameManga.length - 1))
         const res = await api.getMangas(ArrayNameManga[randomManga]);
-        setRandomManga(res.data[0]);
+        setRandomManga(res.data);
     }
     useEffect(() => {
         getRandomManga();
     }, [])
     return (
-        <ApiMangaContext.Provider value={{ randomManga }}>
+        <ApiMangaContext.Provider value={{ randomManga, getRandomManga }}>
             {children}
         </ApiMangaContext.Provider>
     )
