@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import { Navigation } from "swiper";
+import { useState } from 'react';
 
 
 const SixthSection: React.FC<SixthSectionPropsType> = ({
@@ -13,40 +14,73 @@ const SixthSection: React.FC<SixthSectionPropsType> = ({
   innerRef,
   ...rest
 }) => {
+  const [teste, setTeste] = useState("")
+  const arrayDayOfWeek = [
+    {
+      "id": 1,
+      "day": "Monday",
+    },
+    {
+      "id": 2,
+      "day": "Tuesday",
+    },
+    {
+      "id": 3,
+      "day": "Wednesday",
+    },
+    {
+      "id": 4,
+      "day": "Thursday",
+    }, {
+      "id": 5,
+      "day": "Friday",
+    },
+    {
+      "id": 6,
+      "day": "Saturday",
+    },
+    {
+      "id": 7,
+      "day": "Sunday",
+    },
+  ]
+  const dayWeek = (a: string) => {
+    setTeste(a)
+    alert(a)
+  }
   return (
     <S.Container {...rest}>
 
-      <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-        <SwiperSlide>
-          <S.ContainerDayOfWeek onClick={() => { alert("sdas") }}>
-            <S.DayOfWeekButton>
-              tesetse
-            </S.DayOfWeekButton>
-          </S.ContainerDayOfWeek>
-        </SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
-      </Swiper>
-      {/* <S.Title>Releases of the week</S.Title>
+      <S.Title>Releases of the week</S.Title>
       <S.ContainerRelease>
-    
-        <S.ContainerDayOfWeek>
-          <div>Segunda</div>
-          <div>Terca</div>
-          <div>Quarta</div>
-          <div>Quinta</div>
-          <div>Sexta</div>
-          <div>Sabado</div>
-          <div>Domingo</div>
-        </S.ContainerDayOfWeek>
+        <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+          {
+            arrayDayOfWeek.map(({ id, day }) => {
+              return (
+                <SwiperSlide key={id}>
+                  <S.ContainerDayOfWeek onClick={() => dayWeek(day)}>
+                    <S.DayOfWeekButton>
+                      {day}
+                    </S.DayOfWeekButton>
+                  </S.ContainerDayOfWeek>
+                </SwiperSlide>
+              )
+            })
+          }
+        </Swiper>
+        {/* <S.ContainerDayOfWeek>
+          {
+            arrayDayOfWeek.map(({ id, day }) => {
+              return (
+                <S.DayOfWeekButton onClick={() => dayWeek(day)}>
+                  {day}
+                </S.DayOfWeekButton>
+              )
+            })
+          }
+        </S.ContainerDayOfWeek> */}
       </S.ContainerRelease>
-      <Button title='testes' /> */}
+      <Button title='testes' />
     </S.Container>
   );
 };

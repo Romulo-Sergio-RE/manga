@@ -12,8 +12,9 @@ export const Container = styled(Aligment)`
     padding: 90px 0;
   }
   .swiper {
-    width: 350px;
+    width: 300px;
     height: 50px;
+    border-radius: 10px;
   }
   .swiper-slide {
     text-align: center;
@@ -21,8 +22,16 @@ export const Container = styled(Aligment)`
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #fff;
+    background: #202020;
     transition: all 0.5s ease-out;
+  }
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 30px;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #fbff5a;
   }
 `;
 export const Title = styled.div`
@@ -36,7 +45,8 @@ export const Title = styled.div`
 export const ContainerRelease = styled.div`
   width: 350px;
   height: 500px;
-  align-items: center;
+  display: flex;
+  align-items: baseline;
   justify-content: center;
   background-color: #202020;
   border-radius: 20px;
@@ -48,15 +58,28 @@ export const ContainerRelease = styled.div`
   }
   @media ${formatBreakpoint("up", "laptop")} {
     width: 650px;
+    flex-direction: row;
   }
 `;
 export const ContainerDayOfWeek = styled.div`
   :hover {
-    background-color: green;
+    background-color: #fbff5a;
+    color: #202020;
   }
 `;
 export const DayOfWeekButton = styled.button`
-  padding: 5px;
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
   cursor: pointer;
+  background-color: #202020;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: ${karla.style.fontFamily};
+  :hover {
+    background-color: #fbff5a;
+    color: #202020;
+  }
 `;
 export const ContainerCarousel = styled.div``;
