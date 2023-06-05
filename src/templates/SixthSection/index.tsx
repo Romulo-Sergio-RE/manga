@@ -6,7 +6,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import { Navigation } from "swiper";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useMediaQuery } from '@/hooks';
 
 
 const SixthSection: React.FC<SixthSectionPropsType> = ({
@@ -14,73 +15,149 @@ const SixthSection: React.FC<SixthSectionPropsType> = ({
   innerRef,
   ...rest
 }) => {
-  const [teste, setTeste] = useState("")
+  const [mangas, setMangas] = useState<any[]>([]);
+  const [loading, setLoading] = useState(false);
+  const isMobile = useMediaQuery("tablet");
+  useEffect(() => {
+    setMangas(["teste1", "teste2"])
+  }, [])
   const arrayDayOfWeek = [
     {
-      "id": 1,
+      "id": 0,
       "day": "Monday",
+      "images": [
+        "One piece",
+        "naruto",
+      ]
+    },
+    {
+      "id": 1,
+      "day": "Tuesday",
+      "images": [
+        "boku no hero",
+        "bungou stray dogs",
+      ]
     },
     {
       "id": 2,
-      "day": "Tuesday",
+      "day": "Wednesday",
+      "images": [
+        "boku no hero",
+        "bungou stray dogs",
+      ]
     },
     {
       "id": 3,
-      "day": "Wednesday",
+      "day": "Thursday",
+      "images": [
+        "boku no hero",
+        "bungou stray dogs",
+      ]
+    }, {
+      "id": 4,
+      "day": "Friday",
+      "images": [
+        "boku no hero",
+        "bungou stray dogs",
+      ]
     },
     {
-      "id": 4,
-      "day": "Thursday",
-    }, {
       "id": 5,
-      "day": "Friday",
+      "day": "Saturday",
+      "images": [
+        "boku no hero",
+        "bungou stray dogs",
+      ]
     },
     {
       "id": 6,
-      "day": "Saturday",
-    },
-    {
-      "id": 7,
       "day": "Sunday",
+      "images": [
+        "boku no hero",
+        "bungou stray dogs",
+      ]
     },
   ]
-  const dayWeek = (a: string) => {
-    setTeste(a)
-    alert(a)
+  const clickChangeMangas = (day: string) => {
+    setMangas([])
+    setLoading(true)
+    setTimeout(() => {
+      arrayDayOfWeek.map((dados) => {
+        if (day === dados.day) {
+          setMangas(dados.images)
+          setLoading(false)
+        }
+      })
+    }, 1000)
   }
+  const clickChangeMangasSwiper = (slide: any) => {
+    setMangas([])
+    setLoading(true)
+    setTimeout(() => {
+      arrayDayOfWeek.map((dados) => {
+        if (slide === dados.id) {
+          setMangas(dados.images)
+          setLoading(false)
+        }
+      })
+    }, 1000)
+  }
+
   return (
     <S.Container {...rest}>
 
       <S.Title>Releases of the week</S.Title>
       <S.ContainerRelease>
-        <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-          {
-            arrayDayOfWeek.map(({ id, day }) => {
+        {isMobile ?
+
+          <Swiper
+            navigation={true}
+            modules={[Navigation]}
+
+            onSlideChange={(slideChange) => {
+              clickChangeMangasSwiper(slideChange.activeIndex)
+            }}
+            className="mySwiper"
+          >
+            {
+              arrayDayOfWeek.map(({ id, day }) => {
+                return (
+                  <SwiperSlide key={id} >
+                    <S.ContainerDayOfWeek>
+                      <S.DayOfWeekButton>
+                        {day}
+                      </S.DayOfWeekButton>
+                    </S.ContainerDayOfWeek>
+                  </SwiperSlide>
+                )
+              })
+            }
+          </Swiper>
+          :
+          <S.ContainerDayOfWeek>
+            {
+              arrayDayOfWeek.map(({ id, day }) => {
+                return (
+                  <S.DayOfWeekButton onClick={() => clickChangeMangas(day)} key={id}>
+                    {day}
+                  </S.DayOfWeekButton>
+                )
+              })
+            }
+          </S.ContainerDayOfWeek>
+        }
+        <S.ContainerManga>
+          {loading ? "loading..."
+            :
+            <>{mangas.map((manga) => {
               return (
-                <SwiperSlide key={id}>
-                  <S.ContainerDayOfWeek onClick={() => dayWeek(day)}>
-                    <S.DayOfWeekButton>
-                      {day}
-                    </S.DayOfWeekButton>
-                  </S.ContainerDayOfWeek>
-                </SwiperSlide>
+                <div>{manga}</div>
               )
-            })
+            })}</>
           }
-        </Swiper>
-        {/* <S.ContainerDayOfWeek>
-          {
-            arrayDayOfWeek.map(({ id, day }) => {
-              return (
-                <S.DayOfWeekButton onClick={() => dayWeek(day)}>
-                  {day}
-                </S.DayOfWeekButton>
-              )
-            })
-          }
-        </S.ContainerDayOfWeek> */}
+        </S.ContainerManga>
       </S.ContainerRelease>
-      <Button title='testes' />
+      <Button title='Release' />
     </S.Container>
   );
 };

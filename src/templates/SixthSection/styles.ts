@@ -46,19 +46,31 @@ export const ContainerRelease = styled.div`
   width: 350px;
   height: 500px;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 16px;
   background-color: #202020;
   border-radius: 20px;
   border: solid 2px #fbff5a;
   box-shadow: 0rem 0.3125rem 0.9375rem 0rem rgba(0, 0, 0, 0.5);
-  padding: 0 10px;
+  padding: 20px;
   @media ${formatBreakpoint("up", "tablet")} {
-    width: 550px;
+    width: 650px;
   }
   @media ${formatBreakpoint("up", "laptop")} {
-    width: 650px;
-    flex-direction: row;
+    width: 750px;
+  }
+`;
+export const ContainerManga = styled.div`
+  width: 308px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  @media ${formatBreakpoint("up", "tablet")} {
+    width: 608px;
   }
 `;
 export const ContainerDayOfWeek = styled.div`
@@ -68,7 +80,7 @@ export const ContainerDayOfWeek = styled.div`
   }
 `;
 export const DayOfWeekButton = styled.button`
-  padding: 8px;
+  padding: 10px;
   border-radius: 10px;
   border: none;
   cursor: pointer;
@@ -77,9 +89,5 @@ export const DayOfWeekButton = styled.button`
   font-size: 16px;
   font-weight: 700;
   font-family: ${karla.style.fontFamily};
-  :hover {
-    background-color: #fbff5a;
-    color: #202020;
-  }
 `;
 export const ContainerCarousel = styled.div``;
