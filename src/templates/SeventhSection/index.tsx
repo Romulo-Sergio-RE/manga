@@ -9,7 +9,7 @@ const SeventhSection: React.FC<SeventhSectionPropsType> = ({
 }) => {
   const isMobile = useMediaQuery("tablet")
   return (
-    <S.Container {...rest} >
+    <S.Container {...rest} id="contact">
       <S.Title>MANGA</S.Title>
       <S.Text>
         If you want to venture into the great stories

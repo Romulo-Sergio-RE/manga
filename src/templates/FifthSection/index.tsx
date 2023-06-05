@@ -12,9 +12,9 @@ const FifthSection: React.FC<FifthSectionPropsType> = ({
   innerRef,
   ...rest
 }) => {
-  const api = useApiManga()
   const isMobile = useMediaQuery('mobile');
   const isTablet = useMediaQuery('tablet');
+
   const arrayDataMangasFavoriteMobile = [
     {
       "id": 0,
@@ -23,8 +23,8 @@ const FifthSection: React.FC<FifthSectionPropsType> = ({
     },
     {
       "id": 1,
-      "imageManga": <S.ImgBokuNoHeroMobile />,
-      "nameManga": "Boku No Hero",
+      "imageManga": <S.ImgOnePunchManMobile />,
+      "nameManga": "One Punch Man",
     },
     {
       "id": 2,
@@ -34,7 +34,30 @@ const FifthSection: React.FC<FifthSectionPropsType> = ({
     {
       "id": 3,
       "imageManga": <S.ImgOnePieceMobile />,
-      "nameManga": "Blue Lock",
+      "nameManga": "One Piece",
+    },
+  ]
+  const arrayDataMangasFavoriteMobileTwo = [
+    {
+      "id": 0,
+      "imageManga": <S.ImgChainsawManMobile />,
+      "nameManga": "Chainsaw Man",
+    },
+    {
+      "id": 1,
+      "imageManga": <S.ImgBokuNoHeroMobile />,
+      "nameManga": "Boku No Hero",
+    },
+    {
+      "id": 2,
+      "imageManga": <S.ImgOnePunchManMobile />,
+      "nameManga": "One Punch Man",
+    },
+
+    {
+      "id": 3,
+      "imageManga": <S.ImgTokyoRevengersMobile />,
+      "nameManga": "One Piece",
     },
   ]
   const arrayDataMangasFavoriteWeb = [
@@ -50,13 +73,37 @@ const FifthSection: React.FC<FifthSectionPropsType> = ({
     },
     {
       "id": 2,
-      "imageManga": <S.ImgTokyoRevengersWeb />,
-      "nameManga": "Tokyo evengers",
+      "imageManga": <S.ImgOnePunchManWeb />,
+      "nameManga": "One Punch Man",
     },
+
     {
       "id": 3,
       "imageManga": <S.ImgOnePieceWeb />,
       "nameManga": "Blue Lock",
+    },
+  ]
+  const arrayDataMangasFavoriteWebTwo = [
+    {
+      "id": 0,
+      "imageManga": <S.ImgChainsawManWeb />,
+      "nameManga": "Chainsaw Man",
+    },
+    {
+      "id": 1,
+      "imageManga": <S.ImgBokuNoHeroWeb />,
+      "nameManga": "Boku No Hero",
+    },
+    {
+      "id": 2,
+      "imageManga": <S.ImgOnePunchManWeb />,
+      "nameManga": "One Punch Man",
+    },
+
+    {
+      "id": 3,
+      "imageManga": <S.ImgTokyoRevengersWeb />,
+      "nameManga": "One Piece",
     },
   ]
   return (
@@ -126,7 +173,7 @@ const FifthSection: React.FC<FifthSectionPropsType> = ({
               className="mySwiper"
             >
               {
-                arrayDataMangasFavoriteMobile.map(({ id, imageManga, nameManga }) => {
+                arrayDataMangasFavoriteMobileTwo.map(({ id, imageManga, nameManga }) => {
                   return (
                     <SwiperSlide key={id}>
                       <CardThrid
@@ -142,7 +189,7 @@ const FifthSection: React.FC<FifthSectionPropsType> = ({
             isTablet ?
               <S.ContainerGridMangas>
                 {
-                  arrayDataMangasFavoriteMobile.map(({ id, imageManga, nameManga }) => {
+                  arrayDataMangasFavoriteMobileTwo.map(({ id, imageManga, nameManga }) => {
                     return (
                       <div key={id}>
                         <CardThrid
@@ -157,7 +204,7 @@ const FifthSection: React.FC<FifthSectionPropsType> = ({
               :
               <S.ContainerGridMangas>
                 {
-                  arrayDataMangasFavoriteWeb.map(({ id, imageManga, nameManga, }) => {
+                  arrayDataMangasFavoriteWebTwo.map(({ id, imageManga, nameManga, }) => {
                     return (
                       <div key={id}>
                         <CardThrid

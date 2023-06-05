@@ -26,9 +26,9 @@ const Header: React.FC<HeaderPropsType> = ({
             onClick={() => setNav(!Nav)}
           />
         </div>
-        <Link href={"/"} className='link'>Genres</Link>
-        <Link href={"/"} className='link'>Weekly Release</Link>
-        <Link href={"/"} className='link'>Contact</Link>
+        <Link href={"#genres"} className='link'>Genres</Link>
+        <Link href={"#release"} className='link'>Weekly Release</Link>
+        <Link href={"#contact"} className='link'>Contact</Link>
       </div>
     </S.ContainerInternal>
   );

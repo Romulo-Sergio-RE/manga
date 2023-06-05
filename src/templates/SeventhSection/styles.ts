@@ -9,9 +9,10 @@ import ImageTwitter from "../../assets/images/twitter.png";
 import ImageInstagram from "../../assets/images/instagram.png";
 import ImageYoutube from "../../assets/images/youtube.png";
 
-export const Container = styled(Aligment)`
+export const Container = styled.div`
   width: 100%;
   height: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;

@@ -5,6 +5,8 @@ import ImageAnimeTwo from "../../assets/images/BlackClover.png";
 import ImageAnimeThree from "../../assets/images/ChainsawMan.png";
 import ImageAnimeFour from "../../assets/images/BokuNoHero.png";
 import ImageAnimefive from "../../assets/images/OnePiece.png";
+import ImageAnimeSix from "../../assets/images/OnePuchMan.png";
+
 import { Aligment } from "@/components/Aligment";
 import { formatBreakpoint } from "@/utils";
 import { karla } from "@/assets/fonts/font";
@@ -132,6 +134,22 @@ export const ImgOnePieceWeb = styled(Image).attrs({
 })``;
 export const ImgOnePieceMobile = styled(Image).attrs({
   src: ImageAnimefive,
+  alt: "",
+  width: 153,
+  height: 203,
+  unoptimized: true,
+  priority: true,
+})``;
+export const ImgOnePunchManWeb = styled(Image).attrs({
+  src: ImageAnimeSix,
+  alt: "",
+  width: 230,
+  height: 312,
+  unoptimized: true,
+  priority: true,
+})``;
+export const ImgOnePunchManMobile = styled(Image).attrs({
+  src: ImageAnimeSix,
   alt: "",
   width: 153,
   height: 203,

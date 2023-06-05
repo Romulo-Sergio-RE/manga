@@ -10,9 +10,11 @@ import ImageAnimDrama from "../../assets/images/thridSection/animeDrama.png";
 import ImageAnimeSliceOfLife from "../../assets/images/thridSection/animeSliceOfLife.png";
 import { formatBreakpoint } from "@/utils";
 
-export const Container = styled(Aligment)`
+export const Container = styled.div`
+  display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   padding: 60px 0;
   gap: 32px;
   @media ${formatBreakpoint("up", "tablet")} {

@@ -11,44 +11,44 @@ const ThirdSection: React.FC<ThirdSectionPropsType> = ({
     {
       "id": 1,
       "imageManga": <S.ImgAnimeSportMobile />,
-      "title": "Esporte",
-      "descrition": "Historia involvendo o esporte e competiçoes",
+      "title": "Sport",
+      "descrition": "History involving the sport and competitions",
     },
     {
       "id": 2,
       "imageManga": <S.ImgAnimeActionMobile />,
-      "title": "Ação",
-      "descrition": "Sentimento de tensão nas lutas",
+      "title": "Action",
+      "descrition": "Feeling of tension in fights",
     },
     {
       "id": 3,
       "imageManga": <S.ImgAnimeComedyMobile />,
-      "title": "Comedia",
-      "descrition": "Mergulhe em um mundo imaginario e inspirador",
+      "title": "Comedy",
+      "descrition": "Enter a funny and imaginary world",
     },
     {
       "id": 4,
       "imageManga": <S.ImgAnimeHorrorMobile />,
-      "title": "Terror",
-      "descrition": "Aproveite a sensação de medo",
+      "title": "Horror",
+      "descrition": "Feel the fear and anguish of the characters",
     },
     {
       "id": 5,
       "imageManga": <S.ImgAnimeDramaMobile />,
       "title": "Drama",
-      "descrition": "Aproveite o sentimento de drama",
+      "descrition": "Enjoy the feeling of drama",
     },
     {
       "id": 6,
       "imageManga": <S.ImgAnimeSliceOfLifeMobile />,
       "title": "Slice of Life",
-      "descrition": "Mergulhe no estilo de vida dos personagens",
+      "descrition": "Get into the lifestyle of the characters",
     },
 
 
   ]
   return (
-    <S.Container {...rest}>
+    <S.Container {...rest} id='genres'>
       <S.Title>Explore your Interests</S.Title>
       <S.ContainerGrid>
         {

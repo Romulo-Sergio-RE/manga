@@ -16,13 +16,13 @@ export default function Home() {
     <>
       <ApiMangaProvider>
         <Suspense fallback={<Loading />}>
-          {/* <FirstSection />
+          <FirstSection />
           <SecondSection />
           <ThirdSection />
           <FourthSection />
           <FifthSection />
-          <SeventhSection /> */}
           <SixthSection />
+          <SeventhSection />
         </Suspense>
       </ApiMangaProvider>
     </>

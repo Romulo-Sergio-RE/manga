@@ -5,4 +5,5 @@ export type CardThridPropsType = {
   className?: string;
   imgManga: any;
   nameManga: string;
+  colorTitleManga?: string;
 };

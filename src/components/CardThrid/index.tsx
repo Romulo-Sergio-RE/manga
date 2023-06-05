@@ -6,6 +6,7 @@ const CardThrid: React.FC<CardThridPropsType> = ({
   innerRef,
   imgManga,
   nameManga,
+  colorTitleManga,
   ...rest
 }) => {
   return (
@@ -13,7 +14,7 @@ const CardThrid: React.FC<CardThridPropsType> = ({
       <S.ImgManga>
         {imgManga}
       </S.ImgManga >
-      <S.Title>{nameManga}</S.Title>
+      <S.Title colorTitle={colorTitleManga}>{nameManga}</S.Title>
     </S.Container>
   );
 };
