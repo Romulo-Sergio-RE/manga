@@ -3,7 +3,7 @@ import { karla } from "@/assets/fonts/font";
 import { formatBreakpoint } from "@/utils";
 
 type ProspTitle = {
-  colorTitle: string | "#000";
+  colorTitle: string | "#000" | undefined;
 };
 export const Container = styled.div`
   display: flex;
