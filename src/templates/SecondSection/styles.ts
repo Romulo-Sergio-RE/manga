@@ -4,7 +4,6 @@ import ImageAnimeOne from "../../assets/images/secondSection/JujutsuKaisen.png";
 import ImageAnimeTwo from "../../assets/images/secondSection/BungouStrayDogs.png";
 import ImageAnimeThree from "../../assets/images/secondSection/BlueLock.png";
 import { karla } from "@/assets/fonts/font";
-import { Aligment } from "@/components/Aligment";
 import { formatBreakpoint } from "@/utils";
 
 export const Container = styled.div`

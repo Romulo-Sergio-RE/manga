@@ -1,5 +1,4 @@
 import { karla, notoSansJP } from "@/assets/fonts/font";
-import { Aligment } from "@/components/Aligment";
 import { formatBreakpoint } from "@/utils";
 import Image from "next/image";
 import styled from "styled-components";
