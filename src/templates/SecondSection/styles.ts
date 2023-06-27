@@ -7,10 +7,11 @@ import { karla } from "@/assets/fonts/font";
 import { Aligment } from "@/components/Aligment";
 import { formatBreakpoint } from "@/utils";
 
-export const Container = styled(Aligment)`
+export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   padding: 60px 0;
   gap: 50px;
   @media ${formatBreakpoint("up", "tablet")} {
@@ -27,7 +28,7 @@ export const Container = styled(Aligment)`
     align-items: center;
   }
 `;
-export const ContainerMangas = styled(Aligment)`
+export const ContainerMangas = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;

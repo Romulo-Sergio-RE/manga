@@ -7,14 +7,14 @@ import ImageAnimeFour from "../../assets/images/BokuNoHero.png";
 import ImageAnimefive from "../../assets/images/OnePiece.png";
 import ImageAnimeSix from "../../assets/images/OnePuchMan.png";
 
-import { Aligment } from "@/components/Aligment";
 import { formatBreakpoint } from "@/utils";
 import { karla } from "@/assets/fonts/font";
 
-export const Container = styled(Aligment)`
+export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   padding: 60px 0;
   gap: 40px;
   border-radius: 40px 40px 0 0;
@@ -34,7 +34,7 @@ export const Container = styled(Aligment)`
     border-radius: 80px 80px 0 0;
   }
 `;
-export const ContainerGridMangas = styled(Aligment)`
+export const ContainerGridMangas = styled.div`
   display: grid;
   grid-template-columns: auto auto;
   row-gap: 32px;

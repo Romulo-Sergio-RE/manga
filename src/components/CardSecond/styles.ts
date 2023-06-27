@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import { Aligment } from "../Aligment";
 import { karla, notoSansJP } from "@/assets/fonts/font";
 
-export const Container = styled(Aligment)`
+export const Container = styled.div`
   display: flex;
   align-items: baseline;
   justify-content: center;
+  flex-direction: column;
   p {
     display: flex;
     align-items: center;

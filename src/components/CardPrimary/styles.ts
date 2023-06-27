@@ -1,12 +1,12 @@
 import { karla } from "@/assets/fonts/font";
 import styled from "styled-components";
-import { Aligment } from "../Aligment";
 import { formatBreakpoint } from "@/utils";
 
-export const Container = styled(Aligment)`
+export const Container = styled.div`
   display: flex;
   align-items: baseline;
   justify-content: center;
+  flex-direction: column;
 `;
 export const ImgManga = styled.div`
   filter: drop-shadow(0.0625rem 0.375rem 0.25rem rgb(0, 0, 0, 0.6));

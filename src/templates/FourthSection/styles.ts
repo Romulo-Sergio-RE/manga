@@ -5,10 +5,10 @@ import ImageAppWeb from "../../assets/images/appPhoneWeb.png";
 import ImageGoogle from "../../assets/images/google.png";
 import ImageApple from "../../assets/images/apple.png";
 import { karla } from "@/assets/fonts/font";
-import { Aligment } from "@/components/Aligment";
 import { formatBreakpoint } from "@/utils";
 
-export const Container = styled(Aligment)`
+export const Container = styled.div`
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -21,11 +21,12 @@ export const Container = styled(Aligment)`
     gap: 100px;
   }
 `;
-export const ContainerImg = styled(Aligment)`
+export const ContainerImg = styled.div`
   position: relative;
-  top: 4px;
+  top: 8px;
 `;
-export const ContainerTitleIcon = styled(Aligment)`
+export const ContainerTitleIcon = styled.div`
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -42,7 +43,8 @@ export const Title = styled.div`
     text-align: left;
   }
 `;
-export const ContainerIconApp = styled(Aligment)`
+export const ContainerIconApp = styled.div`
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;

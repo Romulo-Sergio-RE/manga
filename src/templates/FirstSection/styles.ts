@@ -1,5 +1,4 @@
 import { karla, notoSansJP } from "@/assets/fonts/font";
-import { Aligment } from "@/components/Aligment";
 import { formatBreakpoint } from "@/utils/formatBreakpoint";
 import styled from "styled-components";
 import Image from "next/image";
@@ -11,30 +10,38 @@ import ImageOnePiece from "../../assets/images/firstSection/anime-4.png";
 type PropsImageBack = {
   coverimg: string;
 };
-export const Container = styled(Aligment)`
+export const Container = styled.div`
+  display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   padding: 0 0 60px 0;
   @media ${formatBreakpoint("up", "tablet")} {
     padding: 0 0 90px 0;
   }
 `;
-export const ContainerInfoManga = styled(Aligment)`
+export const ContainerInfoManga = styled.div`
+  display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   gap: 16px;
 `;
-export const ContainerManga = styled(Aligment)`
+export const ContainerManga = styled.div`
+  display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   gap: 8px;
   @media ${formatBreakpoint("up", "tablet")} {
     gap: 32px;
   }
 `;
-export const ContainerInfo = styled(Aligment)`
+export const ContainerInfo = styled.div`
+  display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   padding: 10px 0;
   gap: 8px;
   @media ${formatBreakpoint("up", "tablet")} {
@@ -46,7 +53,7 @@ export const ContainerInfo = styled(Aligment)`
     gap: 90px;
   }
 `;
-export const ImgBack = styled(Aligment)<PropsImageBack>`
+export const ImgBack = styled.div<PropsImageBack>`
   width: 100%;
   height: 100%;
   position: absolute;
@@ -58,7 +65,7 @@ export const ImgBack = styled(Aligment)<PropsImageBack>`
   background-size: cover;
   background-image: url(${(props) => props.coverimg});
 `;
-export const Title = styled(Aligment)`
+export const Title = styled.div`
   font-size: 24px;
   font-family: ${karla.style.fontFamily};
   font-weight: 700;
@@ -66,7 +73,7 @@ export const Title = styled(Aligment)`
     font-size: 32px;
   }
 `;
-export const Text = styled(Aligment)`
+export const Text = styled.div`
   width: 350px;
   font-size: 16px;
   font-family: ${notoSansJP.style.fontFamily};

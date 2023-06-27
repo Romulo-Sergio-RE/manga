@@ -1,14 +1,15 @@
 import styled from "styled-components";
-import { Aligment } from "../Aligment";
 import { karla } from "@/assets/fonts/font";
 import { formatBreakpoint } from "@/utils";
 
 type ProspTitle = {
   colorTitle: string | "#000";
 };
-export const Container = styled(Aligment)`
+export const Container = styled.div`
+  display: flex;
   align-items: baseline;
   justify-content: center;
+  flex-direction: column;
   gap: 0.625rem;
 `;
 export const ImgManga = styled.div`

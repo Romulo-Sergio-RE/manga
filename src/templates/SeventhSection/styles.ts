@@ -20,7 +20,7 @@ export const Container = styled.div`
   gap: 50px;
   background-color: #dad5c0;
 `;
-export const Footer = styled(Aligment)`
+export const Footer = styled.div`
   bottom: 0;
   position: absolute;
   width: 100%;
@@ -28,6 +28,7 @@ export const Footer = styled(Aligment)`
   height: 3.125rem;
   background-color: #000000;
   color: #fff;
+  display: flex;
   align-items: center;
   justify-content: center;
   font-size: 0.875rem;
@@ -51,7 +52,8 @@ export const Text = styled.div`
     font-size: 1.125rem;
   }
 `;
-export const ContainerIcons = styled(Aligment)`
+export const ContainerIcons = styled.div`
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;

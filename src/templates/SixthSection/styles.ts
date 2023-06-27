@@ -1,5 +1,4 @@
 import { karla } from "@/assets/fonts/font";
-import { Aligment } from "@/components/Aligment";
 import { formatBreakpoint } from "@/utils";
 import styled from "styled-components";
 import Image from "next/image";
